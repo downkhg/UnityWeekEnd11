@@ -131,10 +131,10 @@ namespace UnityBasicCS
             int nMonsterAttack = 10;
             int nMonsterHP = 100;
 
-            Console.WriteLine("1.PlayerHP:" + nMonsterHP);
+            Console.WriteLine("1.PlayerHP:" + nPlayerHP);
             Console.WriteLine("1.PlayerAttack:" + nPlayerAttack);
-            Console.WriteLine("1.MonsterHP:" + nPlayerHP);
-            Console.WriteLine("1.MonsterAttack:" + nPlayerAttack);
+            Console.WriteLine("1.MonsterHP:" + nMonsterHP);
+            Console.WriteLine("1.MonsterAttack:" + nMonsterAttack);
             //while (nMonsterHP <= 0) //100 <= 0 -> F
             //while(true)
             while (nMonsterHP > 0)//종료조건의 반대조건을 준다.
