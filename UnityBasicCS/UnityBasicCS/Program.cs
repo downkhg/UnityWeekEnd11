@@ -150,9 +150,9 @@ namespace UnityBasicCS
 
                 if (nMonsterHP > 0)
                 {
-                    Console.WriteLine("1.PlayerHP:" + nMonsterHP);
+                    Console.WriteLine("1.PlayerHP:" + nPlayerHP);
                     nPlayerHP = nPlayerHP - nMonsterAttack;
-                    Console.WriteLine("2.PlayerHP:" + nMonsterHP);
+                    Console.WriteLine("2.PlayerHP:" + nPlayerHP);
                     //if (nMonsterHP <= 0) break;//hp가 0이되면 중단한다.
                 }
                 else
