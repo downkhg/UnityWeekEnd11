@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CSClass.Pokemon">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgIAAQUAQIAAQAAgAAAAAAAAQAA=</HashCode>
+      <FileName>Pokemon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSClass.Trainner">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQAAgAAAAEA=</HashCode>
+      <FileName>Pokemon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityClassCS.Player">
+    <Position X="3.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgIAAQEAAIAAQAAgAAAAAAAAQAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityClassCS.Program">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="UnityClassCS.Program.E_FILED">
+        <TypeIdentifier>
+          <NewMemberFileName>Program.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAEAAAEAAAAAAAAAAAAEAAAAAAAAAAAACAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

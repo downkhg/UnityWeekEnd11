@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSClass;
+using System;
 using System.Collections.Generic;
 
 namespace UnityClassCS
@@ -43,7 +44,8 @@ namespace UnityClassCS
         {
             Console.WriteLine("Hello World!");
             //BattleMain();
-            RPGMain();
+            //RPGMain();
+            PokemonGameMain();
         }
 
         static void BattleMain()
@@ -154,6 +156,69 @@ namespace UnityClassCS
                 }
                 nTrun++;
             }
+        }
+
+        static public bool PokemonBattleMain(Pokemon player, Pokemon monster)
+        {
+            player.Display();
+            monster.Display();
+            int nTrun = 1;
+            while (true)
+            {
+                Console.WriteLine("###### Turn:" + nTrun + " ######");
+                if (player.Death() == false)
+                {
+                    player.Attack(monster);
+                    monster.Display();
+                }
+                else
+                {
+                    Console.WriteLine("Monster Win!");
+                    break;
+                }
+                if (monster.Death() == false)
+                {
+                    monster.Attack(player);
+                    player.Display();
+                }
+                else
+                {
+                    Console.WriteLine("Player Win!");
+                    return true;
+                    break;
+                }
+                nTrun++;
+            }
+
+            return false;
+        }
+
+        //1.포켓몬
+        static void PokemonGameMain()
+        {
+            Trainner trainner = new Trainner("레드");
+            Pokemon pokemonA = new Pokemon("이상해씨",100,10);
+            Pokemon pokemonB = new Pokemon("파이리", 100, 10);
+            Pokemon pokemonC = new Pokemon("꼬부기", 100, 10);
+
+            trainner.Catch(pokemonA);
+
+            List<Pokemon> listPokemon = new List<Pokemon>();
+
+            listPokemon.Add(new Pokemon("구구", 100, 10));
+            listPokemon.Add(new Pokemon("꼬렛", 100, 10));
+            listPokemon.Add(new Pokemon("케터피", 100, 10));
+
+            Pokemon widePokemon = listPokemon[0];
+            Pokemon myPokemon = trainner.Throw("이상해씨");
+
+
+            if (PokemonBattleMain(myPokemon, widePokemon))
+            {
+                Console.WriteLine("Catch:"+ widePokemon.Name);
+                trainner.Catch(widePokemon);
+            }
+
         }
     }
 }
