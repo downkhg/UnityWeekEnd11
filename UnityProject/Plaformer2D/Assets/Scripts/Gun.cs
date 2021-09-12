@@ -12,6 +12,6 @@ public class Gun : MonoBehaviour
         GameObject copyBullet = Instantiate(objBullet);
         copyBullet.transform.position = this.transform.position;
         Rigidbody2D rigidbody = copyBullet.GetComponent<Rigidbody2D>();
-        rigidbody.AddForce(Vector3.right * ShotPower);
+        rigidbody.AddForce(dir * ShotPower);
     }
 }

@@ -200,6 +200,7 @@ MonoBehaviour:
   isGround: 0
   Score: 0
   Speed: 1
+  gun: {fileID: 2836914053463706521}
 --- !u!50 &2836914054087024127
 Rigidbody2D:
   serializedVersion: 4
