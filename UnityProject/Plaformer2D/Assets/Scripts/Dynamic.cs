@@ -8,6 +8,7 @@ public class Dynamic : MonoBehaviour
     public bool isGround;
     public int Score;
     public float Speed;
+    public Gun gun;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,13 @@ public class Dynamic : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow))
+        {
             transform.position += Vector3.right * Speed * Time.deltaTime;
+        }
         if (Input.GetKey(KeyCode.LeftArrow))
+        {
             transform.position += Vector3.left * Speed * Time.deltaTime;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -31,6 +36,11 @@ public class Dynamic : MonoBehaviour
                 rigidbody.AddForce(Vector3.up * JumpPower);
                 isGround = false;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            gun.Shot(Vector3.right);
         }
     }
     private void OnGUI()

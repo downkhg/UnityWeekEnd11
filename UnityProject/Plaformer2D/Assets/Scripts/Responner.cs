@@ -18,6 +18,7 @@ public class Responner : MonoBehaviour
                Resources.Load("Prefabs/"+ prefabsName) as GameObject;
 
         player = Instantiate(prefabPlayer);
+        player.name = prefabsName;
         player.transform.position = this.transform.position;
         Debug.Log("ProcessTimmer 2");
         isRespon = false;
