@@ -3751,22 +3751,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7018345912977022023}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &599698859
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599698857}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.205
 --- !u!1 &671103932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,6 +3873,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 10
+--- !u!1 &735058668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 735058670}
+  - component: {fileID: 735058669}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &735058669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735058668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792aa21b1d1eac468117ad70f8a4cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responnerPlayer: {fileID: 1374874592}
+  responnerOpossum: {fileID: 1277514368}
+  responnerEagle: {fileID: 154563052}
+--- !u!4 &735058670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735058668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2665977, y: 0.80244625, z: -0.06890854}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031262686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4878,6 +4908,16 @@ PrefabInstance:
       propertyPath: Site
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7018345913524548077, guid: 8bcbeb6181e1cc64cb605544a9edab37,
+        type: 3}
+      propertyPath: objResponner
+      value: 
+      objectReference: {fileID: 154563051}
+    - target: {fileID: 7018345913524548077, guid: 8bcbeb6181e1cc64cb605544a9edab37,
+        type: 3}
+      propertyPath: objPatrolPoint
+      value: 
+      objectReference: {fileID: 1277514367}
     - target: {fileID: 7018345913524548078, guid: 8bcbeb6181e1cc64cb605544a9edab37,
         type: 3}
       propertyPath: m_Name

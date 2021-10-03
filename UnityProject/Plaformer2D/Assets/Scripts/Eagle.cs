@@ -8,7 +8,10 @@ public class Eagle : MonoBehaviour
     public GameObject objTarget;
     public float Site;
 
+    public GameObject objResponner;
     public GameObject objPatrolPoint;
+
+    public bool isMove = false;
 
     private void OnDrawGizmos()
     {
@@ -56,6 +59,16 @@ public class Eagle : MonoBehaviour
     void Update()
     {
         UpdateMove();
+        UpdateReturn();
+        UpdatePatrol();
+    }
+
+    void UpdateReturn()
+    {
+        if (objTarget == null)
+        {
+            objTarget = objResponner;
+        }
     }
 
     void UpdateMove()
@@ -70,13 +83,38 @@ public class Eagle : MonoBehaviour
 
             float fMove = Speed * Time.deltaTime;
             if (fDist > fMove)//이동량보다 거리가 짧으면 이동하지않는다.
+            {
                 transform.position += vDir * fMove;
+                isMove = true;
+            }
+            else
+            {
+                isMove = false;
+            }
+        }
+    }
+
+    void UpdatePatrol()
+    {
+        if (isMove == false)
+        {
+            if (objTarget.name == objResponner.name)
+            {
+                objTarget = objPatrolPoint;
+            }
+            else if (objTarget.name == objPatrolPoint.name)
+            {
+                objTarget = objResponner;
+            }
         }
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)
     private void OnTriggerEnter2D(Collider2D collision)
     {
- 
+        if(collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
