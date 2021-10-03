@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 2836914054087024127}
   - component: {fileID: 2836914054087024126}
   - component: {fileID: 5068734471967739309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -201,6 +201,7 @@ MonoBehaviour:
   Score: 0
   Speed: 1
   gun: {fileID: 2836914053463706521}
+  dir: {x: 0, y: 0, z: 0}
 --- !u!50 &2836914054087024127
 Rigidbody2D:
   serializedVersion: 4
