@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public Responner responnerPlayer;
     public Responner responnerOpossum;
     public Responner responnerEagle;
+    public TrakerCamera trakerCamera;
 
     GameManager instance;
     GameManager GetGameManager()
@@ -31,7 +32,18 @@ public class GameManager : MonoBehaviour
             {
                 if (eagle.objResponner == null)
                     eagle.objResponner = responnerEagle.gameObject;
+
+                if (eagle.objPatrolPoint== null)
+                    eagle.objResponner = responnerPlayer.gameObject;
             }
+        }
+    }
+
+    void CameraSettingProcess()
+    {
+        if (trakerCamera.objTarget == null)
+        {
+            trakerCamera.objTarget = responnerPlayer.player;
         }
     }
 
@@ -39,5 +51,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         ReturnEagleProcess();
+        CameraSettingProcess();
     }
 }
