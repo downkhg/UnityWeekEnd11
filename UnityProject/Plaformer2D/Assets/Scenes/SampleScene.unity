@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 14876923}
   - component: {fileID: 14876922}
   - component: {fileID: 14876924}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4853,6 +4853,11 @@ PrefabInstance:
     - target: {fileID: 2836914054087024125, guid: 534bc6a54de36e84b82ca8c0ccf887c4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836914054087024126, guid: 534bc6a54de36e84b82ca8c0ccf887c4,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
