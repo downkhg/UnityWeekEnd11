@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Vector3 vStartPos;
+    public Player master;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,19 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Monster")
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+
+            //Player player =  GameObject.Find("player").GetComponent<Player>();
+            //Player player = GameManager.GetGameManager().responnerPlayer.player.GetComponent<Player>();
+            Player player = master;
+            Player monster = collision.GetComponent<Player>();
+
+            SuperMode superMode = monster.GetComponent<SuperMode>();
+            if (superMode && superMode.isUse == false)
+            {
+                player.Attack(monster);
+                superMode.On();
+            }
         }
     }
 }

@@ -42,7 +42,7 @@ public class Dynamic : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            gun.Shot(dir);
+            gun.Shot(dir, GetComponent<Player>());
         }
     }
     private void OnGUI()

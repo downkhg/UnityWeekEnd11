@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     public Responner responnerEagle;
     public TrakerCamera trakerCamera;
 
-    GameManager instance;
-    GameManager GetGameManager()
+    static GameManager instance;
+    public static GameManager GetGameManager()
     {
         return instance;
     }

@@ -21,6 +21,7 @@ public class Eagle : MonoBehaviour
     private void FixedUpdate()
     {
         FindLayerCircle();
+        AttackProcess();
         //FindCircleAll();
     }
 
@@ -105,6 +106,27 @@ public class Eagle : MonoBehaviour
             else if (objTarget.name == objPatrolPoint.name)
             {
                 objTarget = objResponner;
+            }
+        }
+    }
+
+    void AttackProcess()
+    {
+        CircleCollider2D circleCollider = this.GetComponent<CircleCollider2D>();
+        Vector2 vPos = this.transform.position;
+        int nLayer = 1 << LayerMask.NameToLayer("Player");
+        Collider2D collider = Physics2D.OverlapCircle(vPos + circleCollider.offset, circleCollider.radius, nLayer);
+
+        if (collider)
+        {
+            SuperMode superMode = collider.GetComponent<SuperMode>();
+            if (superMode && superMode.isUse == false)
+            {
+                //Player monster = this.GetComponent<Player>();
+                Player monster = GameManager.GetGameManager().responnerPlayer.player.GetComponent<Player>();
+                Player player = collider.gameObject.GetComponent<Player>();
+                monster.Attack(player);
+                superMode.On();
             }
         }
     }
