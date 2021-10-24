@@ -9,7 +9,10 @@ public class GameManager : MonoBehaviour
     public Responner responnerEagle;
     public TrakerCamera trakerCamera;
 
+    public GUIStatusBar guiHPBar;
+
     static GameManager instance;
+
     public static GameManager GetGameManager()
     {
         return instance;
@@ -47,10 +50,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void UpdataPlayerStatus()
+    {
+        if (responnerPlayer.player)
+        {
+            Player player = responnerPlayer.player.GetComponent<Player>();
+            guiHPBar.ProcessBar(player.m_nHP, player.m_nMaxHP);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         ReturnEagleProcess();
         CameraSettingProcess();
+        UpdataPlayerStatus();
     }
 }

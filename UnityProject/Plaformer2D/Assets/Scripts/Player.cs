@@ -8,13 +8,20 @@ public class Player : MonoBehaviour
     public int m_nExp = 0;
     public int m_nLv = 1;
     public int m_nHP;
+    public int m_nMaxHP;
     public int m_nStr;
+
+    private void Start()
+    {
+        Init(gameObject.name, m_nHP, m_nStr);
+    }
 
     public void Init(string name, int hp, int str)
     {
         m_strName = name;
         m_nHP = hp;
         m_nStr = str;
+        m_nMaxHP = hp;
     }
     public void Attack(Player target)
     {
