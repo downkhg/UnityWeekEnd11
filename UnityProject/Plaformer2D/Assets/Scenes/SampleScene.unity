@@ -3246,7 +3246,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 22607609}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735058669}
+        m_MethodName: EventPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &22607609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3365,7 +3376,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 133561137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735058669}
+        m_MethodName: EventExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &133561137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3982,7 +4004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &477095146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4732,6 +4754,12 @@ MonoBehaviour:
   responnerEagle: {fileID: 154563052}
   trakerCamera: {fileID: 519420030}
   guiHPBar: {fileID: 1335461377}
+  curGuiSecne: 2
+  listGUIScene:
+  - {fileID: 1370121769}
+  - {fileID: 935870051}
+  - {fileID: 477095145}
+  - {fileID: 1296381668}
 --- !u!4 &735058670
 Transform:
   m_ObjectHideFlags: 0
@@ -4917,7 +4945,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 812740414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735058669}
+        m_MethodName: EventPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &812740414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5114,7 +5153,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 931705687}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735058669}
+        m_MethodName: EventToTitle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &931705687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5169,7 +5219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &935870052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5761,7 +5811,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1237259705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735058669}
+        m_MethodName: EventExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1237259705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6042,7 +6103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1296381669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6957,7 +7018,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743453623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 735058669}
+        m_MethodName: EventToTitle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1743453623
 MonoBehaviour:
   m_ObjectHideFlags: 0

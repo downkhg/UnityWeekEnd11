@@ -18,10 +18,70 @@ public class GameManager : MonoBehaviour
         return instance;
     }
 
+    public enum E_GUI_SCENE { TITLE, THEEND, GAME_OVER, PLAY }
+    public E_GUI_SCENE curGuiSecne;
+    public List<GameObject> listGUIScene;
+    void ShowScene(int idx)
+    {
+        for (int i = 0; i < listGUIScene.Count; i++)
+        {
+            if (i == idx)
+                listGUIScene[i].SetActive(true);
+            else
+                listGUIScene[i].SetActive(false);
+        }
+    }
+    public void SetGUISceneStatus(E_GUI_SCENE scene)
+    {
+        switch (scene)
+        {
+            case E_GUI_SCENE.TITLE:
+                break;
+            case E_GUI_SCENE.THEEND:
+                break;
+            case E_GUI_SCENE.GAME_OVER:
+                break;
+            case E_GUI_SCENE.PLAY:
+                break;
+        }
+        ShowScene((int)scene);
+        curGuiSecne = scene;
+    }
+    public void UpdataGUISceneStatus(E_GUI_SCENE scene)
+    {
+        switch (curGuiSecne)
+        {
+            case E_GUI_SCENE.TITLE:
+                break;
+            case E_GUI_SCENE.THEEND:
+                break;
+            case E_GUI_SCENE.GAME_OVER:
+                break;
+            case E_GUI_SCENE.PLAY:
+                break;
+        }
+        ShowScene((int)scene);
+    }
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        SetGUISceneStatus(curGuiSecne);
+    }
+
+    public void EventToTitle()
+    {
+        SetGUISceneStatus(E_GUI_SCENE.TITLE);
+    }
+
+    public void EventExit()
+    {
+        Application.Quit(0);
+    }
+
+    public void EventPlay()
+    {
+        SetGUISceneStatus(E_GUI_SCENE.PLAY);
     }
 
     void ReturnEagleProcess()
