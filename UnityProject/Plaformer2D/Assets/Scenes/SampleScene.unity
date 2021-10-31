@@ -4730,6 +4730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735058670}
   - component: {fileID: 735058669}
+  - component: {fileID: 735058671}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4754,6 +4755,7 @@ MonoBehaviour:
   responnerEagle: {fileID: 154563052}
   trakerCamera: {fileID: 519420030}
   guiHPBar: {fileID: 1335461377}
+  iventoryMonster: {fileID: 0}
   curGuiSecne: 2
   listGUIScene:
   - {fileID: 1370121769}
@@ -4774,6 +4776,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735058671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735058668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f33e27beb8625b41ad536838685097c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &760032484 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4467352936429478146, guid: 0397f4325ae04194eb833dfc1e8f4ab5,
@@ -7605,6 +7619,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1204902857169239293, guid: 534bc6a54de36e84b82ca8c0ccf887c4,
+        type: 3}
+      propertyPath: m_nStr
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2836914054087024122, guid: 534bc6a54de36e84b82ca8c0ccf887c4,
         type: 3}
       propertyPath: m_FlipY

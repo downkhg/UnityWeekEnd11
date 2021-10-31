@@ -16,6 +16,12 @@ public class Player : MonoBehaviour
         Init(gameObject.name, m_nHP, m_nStr);
     }
 
+    private void Update()
+    {
+        if (Death())
+            Destroy(gameObject);
+    }
+
     public void Init(string name, int hp, int str)
     {
         m_strName = name;
@@ -35,13 +41,13 @@ public class Player : MonoBehaviour
             return false;
     }
 
-    public int m_nIdx = 0;
-    private void OnGUI()
-    {
-        string msg = "Name:"+gameObject.name;
-        msg += "\nStr:" + m_nStr;
-        msg += "\nHP:" + m_nHP;
-        msg += "\nExp/Lv:" + m_nExp + "/" + m_nLv;
-        GUI.Box(new Rect(m_nIdx * 100, 0, 100, 100), msg);
-    }
+    //public int m_nIdx = 0;
+    //private void OnGUI()
+    //{
+    //    string msg = "Name:"+gameObject.name;
+    //    msg += "\nStr:" + m_nStr;
+    //    msg += "\nHP:" + m_nHP;
+    //    msg += "\nExp/Lv:" + m_nExp + "/" + m_nLv;
+    //    GUI.Box(new Rect(m_nIdx * 100, 0, 100, 100), msg);
+    //}
 }

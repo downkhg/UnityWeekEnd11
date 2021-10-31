@@ -39,6 +39,11 @@ public class Bullet : MonoBehaviour
             {
                 player.Attack(monster);
                 superMode.On();
+                if (monster.Death())
+                {
+                    PlayerInfo playerInfo = new PlayerInfo(monster.m_strName);
+                    GameManager.GetGameManager().iventoryMonster.SetIventory(playerInfo);
+                }
             }
         }
     }

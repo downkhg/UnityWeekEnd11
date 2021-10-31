@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         return instance;
     }
 
+    public IventoryMonster iventoryMonster;
+
     public enum E_GUI_SCENE { TITLE, THEEND, GAME_OVER, PLAY }
     public E_GUI_SCENE curGuiSecne;
     public List<GameObject> listGUIScene;
