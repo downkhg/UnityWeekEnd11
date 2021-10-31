@@ -69,6 +69,9 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         SetGUISceneStatus(curGuiSecne);
+
+        for(int i =0; i<30; i++)
+            iventoryMonster.SetIventory(new PlayerInfo(string.Format("{0}",i)));
     }
 
     public void EventToTitle()
